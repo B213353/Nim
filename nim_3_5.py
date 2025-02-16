@@ -35,7 +35,7 @@ class MuZeroConfig:
         self.max_moves = max_piles * max_stones  # 手数の上限
         self.num_simulations = 50  # シミュレーション数
         self.discount = 1  # 報酬の時間割引率
-        self.temperature_threshold = (max_piles * max_stones) // 3  # 手数がこの値を超えた後は、visit_softmax_temperature_fnによる温度が0になり、最善手を選択する。Noneの場合は常に関数を使用
+        self.temperature_threshold = (max_piles * max_stones) // 2  # 手数がこの値を超えた後は、visit_softmax_temperature_fnによる温度が0になり、最善手を選択する。Noneの場合は常に関数を使用
 
         # ルート探索ノイズ
         self.root_dirichlet_alpha = 0.1
